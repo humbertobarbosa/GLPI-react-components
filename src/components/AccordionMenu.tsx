@@ -47,6 +47,7 @@ export const AccordionMenu = () => (
 					<p className="flex flex-row font-semibold text-sm content-start justify-start w-full my-5 mx-0 pr-1 aumentaIcone">
 						<User size={20} className="menu__icon w-auto" />
 						<p className="text-hidden ml-2">Perfil</p>
+					</p>
 
 					<AccordionChevron aria-hidden className="text-hidden" />
 				</AccordionTrigger>
@@ -109,7 +110,6 @@ export const AccordionMenu = () => (
 						<Link to="/FormService">Tabela de usuários</Link>
 					</AccordionPrimitive.AccordionContent>
 				</div>
-
 			</AccordionItem>
 		</Accordion>
 	</div>
