@@ -1,10 +1,10 @@
-import "../styles/main.css";
-import { Button } from "./Button";
+import "../../styles/main.css";
+import { Button } from "../Buttons/Button";
 import { CardTitle } from "./CardTitle";
-import { CardLabelInput } from "./CardLabelInput";
+import { CardLabelInput } from "../Inputs/CardLabelInput";
 import { Eye } from "phosphor-react";
 import { Form, Formik } from "formik";
-import { validationSchema } from "../Utils/validations";
+import { validationSchema } from "../../Utils/validations";
 import * as yup from "yup";
 import { toast } from "react-toastify";
 
@@ -33,7 +33,7 @@ export function CardLogin() {
 					}, 400);
 				}}
 			>
-				{({ isSubmitting }) => (
+				{({ isSubmitting, isValid }) => (
 					<Form>
 						<div className="mb-6 px-10">
 							<CardLabelInput
@@ -58,7 +58,7 @@ export function CardLogin() {
 								title="Entrar"
 								theme="primary"
 								type="submit"
-								disabled={isSubmitting}
+								disabled={isSubmitting || !isValid}
 							/>
 							<Button title="Esqueci a senha" theme="textOnly" />
 						</div>
